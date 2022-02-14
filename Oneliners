@@ -1,1 +1,3 @@
 # One liners to stir thoughts.
+cat data.txt | sort -n| uniq –c | wc -l;                             Get a count for total uniq items, and quantity of each uniq item.  
+tcpdump –r my.pcap -w - | snort -r -;                                You can use the "-" for stdout and stdin.  
