@@ -1,0 +1,2 @@
+github.com/google/stenographer    Reading and writing PCAPs Fast.
+Security Onion                    Can be used as as Sensor for full PCAP and Alerts, may also be a SIEM.
