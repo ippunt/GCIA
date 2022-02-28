@@ -1,0 +1,5 @@
+Craft, read, manipulate, combine and write packets and pcaps. CLI access or import for complex tasks into python.
+which scapy; Where is our binary. Entering Scapy will tell you which version it is.
+Help- >>>ls(); show you protocols. >>>ls(ether); shows fields that can be used in ether. >>> ls(IP); show you the IP fields. >>> ls(TCP); TCP fields
+p1 = IP(); empty instance of the class
+>>>p1; shows you mods or  >>>ls(p1); shows all
