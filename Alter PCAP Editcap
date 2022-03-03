@@ -1,0 +1,5 @@
+What editcap cannot do it change the IPs within the file so I will outline that initially.
+  hexdump mysecretfile.pcap > mysecret.hex
+  Find the hex in the file  c0 A8 01 01   find the hex you want to change it to 0A 0A 0A 0A 0A
+ sed -i 's/c0 A8 01 01/0A 0A 0A 0A 0A/g' mysecret.hex
+ mv mysecret.hex mysecretfile.pcap; This is untested. Haven't had to use yet. 
