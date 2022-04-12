@@ -1,0 +1,1 @@
+tcpdump -n -r mybigpcap.pcap -C 2048 -w My_2GB_Segmented.pcap; Sessions will be cut abruptly at 2G
