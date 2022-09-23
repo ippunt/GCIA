@@ -1,6 +1,13 @@
 Craft, read, manipulate, combine and write packets and pcaps. CLI access or import for complex tasks into python.
+1. Help and using tool for help info
+2. LaBrea.py  python script that will utilize all IPs on subnet and play with TCP connections. 
+
+1.
 which scapy; Where is our binary. Entering Scapy will tell you which version it is.
 Help- >>>ls(); show you protocols. >>>ls(ether); shows fields that can be used in ether. >>> ls(IP); show you the IP fields. >>> ls(TCP); TCP fields
 p1 = IP(); empty instance of the class
 >>>p1; shows you mods or  >>>ls(p1); shows all
+
+2. 
 LaBrea.py script runs with scapy to listen on all arps and use all unused IP.
+https://github.com/dhoelzer/ShowMeThePackets/blob/master/Scapy/LaBrea.py
