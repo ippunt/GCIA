@@ -1,0 +1,4 @@
+1. Looks like conpot starts up with ports:
+       FTP:2121, HTTP:8080, IPMI:6230, Modbud:5020, S7Comm:10201, SNMP:16100, TFTP:6969
+       Maybe not map all these would be really fishy or default for PLC? Ask Engineers. 
+  
