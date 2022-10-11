@@ -11,3 +11,4 @@ p1 = IP(); empty instance of the class
 2. 
 LaBrea.py script runs with scapy to listen on all arps and use all unused IP.
 https://github.com/dhoelzer/ShowMeThePackets/blob/master/Scapy/LaBrea.py
+sudo iptables -A OUTPUT -p tcp --tcp-flags RST RST -j DROP
