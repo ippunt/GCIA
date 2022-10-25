@@ -15,3 +15,4 @@ Received ABCDEFHIJ      Urg byte dropped which is G
 
 2.
 UDP closed port received packet, icmp port unreachable sent in response.
+UDP open port received packet, injests the packet into application. No response have to wait for timeout. Why Scanning so slow. 
