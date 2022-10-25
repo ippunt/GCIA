@@ -1,0 +1,17 @@
+1. Expectations
+2. UDP 
+
+
+
+1. 
+[S.] Host receives but never sent [S].   Host will send [R.]
+[S] to host closed port, response [R.]
+[S] to host host does not exist but network does,  Router send ICMP host Unreachable.
+[S] to firewall or router drops,  Retransmits w/ new timestamps
+
+URG pointer used:
+ABCDE seq 1:6 [P.U]   Urg 7, FGHIJ   seq FGHIJ   seq 6:11
+Received ABCDEFHIJ      Urg byte dropped which is G
+
+2.
+UDP closed port received packet, icmp port unreachable sent in response.
