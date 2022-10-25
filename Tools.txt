@@ -1,2 +1,5 @@
 github.com/google/stenographer    Reading and writing PCAPs Fast.
 Security Onion                    Can be used as as Sensor for full PCAP and Alerts, may also be a SIEM.
+editcap                           Read,write, edit, slice, change time. PCAP altering
+silk                              Open Source netflow analyzer. Can also be used as sensor.
+rwp2yaf2silk                      Must have YAF and SILK example:  rwp2yaf2silk --in=my.pcap --out=pcap2flow.silk
