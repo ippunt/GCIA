@@ -1,0 +1,27 @@
+802.3   minimum frame length is 64 Bytes = 14+46+4     ( Header + Packet + FCS )
+A runt is a frame that is smaller than 64 and should be padded with 0s. 
+Actually padding should be done by the nic
+You can never see 4 byte FCS in wirehsark. 
+Vlan  [DSTmac_6B] [SRCmac_6B] [802.1qtag_4B] [payload] [crc]   18 byte header. 
+
+ARP 28 bytes requires padding
+
+IP < 46 Byte is a runt
+
+Ethertypes
+0x800 IPv4, 0x8600 IPv6, 0x806 ARP, 0x8100 VLAN
+
+ARP on a trunk -  0x8100 Needs to tag to function. 
+
+MTU generally 1518 eth, IP 1500
+
+Wireshark:
+ether src aa:bb:cc:dd:ee:ff
+eth.addr aa:bb:cc:dd:ee:ff
+eth.dst  ff:ff:ff:ff:ff:ff
+ether host aa:bb:cc:dd:ee:ff; to and from host
+01:00:5e is multicast
+(eth.dst[0]==01)  multicast or bcast
+You can bitmask in wireshark but best to use built in protocol analyzer. Sometimes a little goofy.
+frmae contains "admin"
+frame contains aa:bb:cc:dd:ee:ff
