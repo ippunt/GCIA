@@ -1,0 +1,7 @@
+Extension headers - 
+Check for extention header IP6[6] = (43)
+An extension header is not fragmentable, and must be processed by all nodes.
+
+16 byte address, 128 bit, 8 byte net 8 byte host. 
+IPv6 does not fragment. Transmitting node must fragment, routers will not. 
+IPv6 is more efficient that IPv4. All hops do not need to do Checksum as there is not one in the header. 
