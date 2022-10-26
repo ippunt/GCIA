@@ -38,3 +38,11 @@ Below happends as sequence:
 CUDP -> SUDP Query 1 question
 SUDP -> CUDP Answer 1 question Truncated bit set
 [S][S.][.] 3 way handshake CTCP -> STCP 1 qestion
+
+FastFlux - DNS resolutions quickly changes with short TTL. Double FF hostnames and resolutions change. 
+
+Dependancies- Response needs Correct IPs, ports, and Query ID.
+
+Poisoning - 
+You could send a query w/ authority and poison the servers answers. That is no longer an option. But there are still methods. 
+  bailwich checkins is what prevents this. 
