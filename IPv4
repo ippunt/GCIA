@@ -31,3 +31,8 @@ The IP ID is the same for all fragments.
 The offset is multiplied by 8 due to 3 missing bits needed for max size. 
 You lose a little bit of accuracy as offset count minimum difference is 8 bits. 
 The offset gets 2 bytes in IP header. They are bytes 6 & 7 starting at 0. 
+Flags are X D M: X Reserved, D Do not Frag, M More frags coming
+Locations: [6]XDM00000
+Of the two bytes after the first 3 bits all after are frag offset count. So, This btye could be  [6]0011|1111  0xbf
+Read the bits do not always rely on tools incase different scenarios are read oddly. Bugs exist!
+
