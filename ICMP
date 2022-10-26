@@ -1,0 +1,26 @@
+Header 8 bytes, IPv4 protocol #1, IPv6 protocol #58
+Checksum only ICMP header proto 1, Proto 58 psuedo-H checksum. Includes IP header.
+Error messages contain embedded packet, no -v may display error.
+reply src & dst is reversed , type 0, payload identical, only windows changes code field.
+ID may sequence per dst host, sequence should be per ping.
+ID is always same Windows 10, seq is only identifier.
+Windows payload icmp[8:32] = 0x61,62,63,69,6a..6f,70..77,61..69    icmp[39] == 0x69, THis is validation in WS
+Linux payload icmp[24:40] = 0x10 ..0x37
+icmp[0] ==8 and icmp[1] ==0; Echo request
+Windows Tracert sends 3 ICMP, Linux sends 3 udp port 334434- 33534
+
+
+Error rules:
+  No error to: an error, dst b-cast, src b-cast or lookback, any frag unless 0 offset. 
+  Bad checksum. Error must send original IP header + 8 bytes so protocol header. 
+  
+  Recon:
+    host unreachable - Network exists
+    port unreachable - host exists and alive
+    error message may be the whole point!
+    
+  Queries:
+  tcpdump will not output info on embedded file
+  tsharl will output based on embedded file info
+  
+  tcpdump -r 1.pcap 'icmp[0] = 8 and not icmp[8:4] = 0x61626364'; ICMP that is not windows. 
