@@ -22,7 +22,12 @@ Wireshark-
 dns.a == 1.1.1.1; find IP in answers
 
 BPF - 
-
+'udp dst port 53 and udp[10] & 0x80 = 0 and udp[18:2] >0' Extended DNS
+'dst port 53 and udp[10] & 0x80 = 0'                      All queries
+'src port 53 and udp[10] & 0x80 = 0x80'                   All responses
+'src port 53 and udp[10] & 0x82 = 0x82'                   All w/ Truncated
+'dst port 53 and udp[10] & 0x81 = 0x81'                   Querie with recursion
+'dst port 53 and udp[10:2] & 0x8180 = 0x8180'             RD+RA
 
 TTL - Is set at authoritive server and states how long other DNS servers should hold on to answer.
 
