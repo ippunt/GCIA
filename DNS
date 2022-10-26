@@ -1,8 +1,10 @@
 May be UDP or TCP
+UDP DNS without EDNS max size is 512 bytes. If response is 513 bytes it must be sent by TCP
 DNS header begins after 8 byte UDP Header. 
 Replies directly for responsible server is Authoritive. Like you local DNS would be authoritive for your domain. Intermediate non-authoritive
 Extended DNS Additional recordds > 0, may be nonqueried DNS results or DNSSec
-
+All dns packets get DF
+nslookup -debug hostname.query.com; Lots of data
 Record types - A record 32 bit, AAAA 128 bit IP address. 
 Cname -  canonical name - alias for name
 MX - mail exchange record
