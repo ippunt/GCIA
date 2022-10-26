@@ -12,3 +12,12 @@ You have to know IP or DNS which converts to IP to communicate.
 Arp resolves IP -> MAC address
 opcode 1 is request, 2 is a reply
 proto type 4 = ipv4, 
+
+If you receive multiple responses it is likely the first response will go to arp cache. 
+Gratuitous will overwrite the cache. 
+
+WS:
+Request - arp.opcode ==1, Reply = arp.opcode ==2
+Gratuitous is arp.opcode ==1, It is not a reply but it is an answer. Letting you know!
+arp.isgratuitous ==1
+
