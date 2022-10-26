@@ -1,0 +1,30 @@
+May be UDP or TCP
+DNS header begins after 8 byte UDP Header. 
+Replies directly for responsible server is Authoritive. Like you local DNS would be authoritive for your domain. Intermediate non-authoritive
+Extended DNS Additional recordds > 0, may be nonqueried DNS results or DNSSec
+
+Record types - A record 32 bit, AAAA 128 bit IP address. 
+Cname -  canonical name - alias for name
+MX - mail exchange record
+NS - Name server record
+PTR - Pointer is receverse lookup
+SOA - Start of Authority Authority information about zone
+
+Zone transfer - Query may show AXFR mydomain.local    Large answeres or transfers are generally TCP. These are truncated
+
+
+
+
+Wireshark
+dns.a == 1.1.1.1; find IP in answers
+
+BPF - 
+
+
+TTL - Is set at authoritive server and states how long other DNS servers should hold on to answer.
+
+Truncated - C is client S is server
+Below happends as sequence: 
+CUDP -> SUDP Query 1 question
+SUDP -> CUDP Answer 1 question Truncated bit set
+[S][S.][.] 3 way handshake CTCP -> STCP 1 qestion
