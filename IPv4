@@ -1,0 +1,12 @@
+Ip Header min length 20 bytes, Max 60 bytes
+IP < 46 bytes packet is a runt and requires padding by the NIC.
+Checksum recomputed for each hop along the way. IP header only.
+TCP and UDP additionally use IP header in their checksum creating psuedo header
+ICMP no psuedo header, IPv6 ICMP psuedo header. IPv6 no checksum on header.
+IHL 4 bits, 1111, 0xf, =15*4= 60 bytes. Internet Header Length. Smallest value is 5, 20 byte minimum. 0x5
+If you receive a packet and unable to validate IP version, Silent discard. Basically drop. Or Invalid version drop. 
+Options will start right after IP header byte 19 if there are any.
+Uniquie identifer Checksum, IP ID but the IP ID will be the same on a full packet and a packet and its fragements. That is how you know frags.
+Max Datagramsize 65,535
+
+
