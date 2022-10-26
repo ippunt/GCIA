@@ -1,0 +1,26 @@
+Floor 1 service requested may present DRSUAPI
+Floor 2 32 bit NDR presented which is the driver
+Floor 3 RPC connection-oriented protocol
+Floor 4 port that the service is found on
+Floor 5 IP where the service is running
+  Usually same host but could forward somewhere else. 
+  
+RPC over SMB    Named pipe is the mechanism. (IPC). CMD->Net share; will show you IPC$. Interprocess communication
+  Uses SMB session to connect to RPC services. Perform authentication and endpoint mapping. 
+
+RPC over TCP/UDP known as DCOM
+  utilizes RPC endpoint mapper TCP/UDP 135 to find/connect to RPC service port.
+  uses ephemeral ports client+server. Proceding 135 port usage will show you DCOM in use
+  
+RPC over HTTP/s   http or https
+   Tunnels requests over well known ports
+   Uses http endpoint mapper TCP/UDP 593 to find service port
+   Allows to tunnel through firewalls if puclicly exposed.
+  
+ MSRPC Computing Environment DCE/RPC
+  SMB for file oriented operations
+  typically used for resource management, user admin, login, directory replication and many others
+  Can run over SMB but is generally over TCP/IP
+  When sent over SMB port 445
+  When used on 139 it is the legacy port
+  Uses 135 port mapper
