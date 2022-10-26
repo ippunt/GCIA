@@ -23,4 +23,4 @@ Error rules:
   tcpdump will not output info on embedded file
   tsharl will output based on embedded file info
   
-  tcpdump -r 1.pcap 'icmp[0] = 8 and not icmp[8:4] = 0x61626364'; ICMP that is not windows. 
+  tcpdump -r 1.pcap 'icmp[0] = 8 and not icmp[8:4] = 0x61626364'; ICMP request that is not windows. 
