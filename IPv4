@@ -1,3 +1,7 @@
+1. Stuff about IP
+2. Stuff about frags
+
+1.
 Ip Header min length 20 bytes, Max 60 bytes
 IP < 46 bytes packet is a runt and requires padding by the NIC.
 Checksum recomputed for each hop along the way. IP header only.
@@ -10,3 +14,20 @@ Uniquie identifer Checksum, IP ID but the IP ID will be the same on a full packe
 Max Datagramsize 65,535
 
 
+2. 
+offset 0 gets full application header TCP or ICMP. Packet 1 offset is 0
+  all frags get IP header w/offset and timestamp changed  
+  only first packet can be recognized for protocol
+  cannot traverse over the internet, Can't NAT IP header without TCP/UDP header. 
+  
+[IP][TCP][Data]                           [IP][Data]                                                 [IP][Data]
+Packet 1, offset 0, MF=1                 Packet 2, offset 1460, MF=1                                 Packet 3, offset 2920, MF=0   
+offset 0 w/ mf obviously first one       All frags same offset except last may be unique
+
+Router will fragment is MTU is exceeded.
+Generally happends due to hiding malware, or a misconfiguration
+
+The IP ID is the same for all fragments. 
+The offset is multiplied by 8 due to 3 missing bits needed for max size. 
+You lose a little bit of accuracy as offset count minimum difference is 8 bits. 
+The offset gets 2 bytes in IP header. They are bytes 6 & 7 starting at 0. 
