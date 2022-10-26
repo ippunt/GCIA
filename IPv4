@@ -41,3 +41,6 @@ Read the bits do not always rely on tools incase different scenarios are read od
 Payload = Total length - IP header Length.
 
 If there is overlap conditions you can visually see how read if you used different data sent in ICMP packet. 
+
+DF may be sent to determine path MTU. IP ID maybe be called fragment field because it is required for fragments. 
+ip[6] & 0x20 = 0x20    MF set
