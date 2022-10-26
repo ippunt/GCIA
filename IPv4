@@ -13,7 +13,7 @@ Options will start right after IP header byte 19 if there are any.
 Uniquie identifer Checksum, IP ID but the IP ID will be the same on a full packet and a packet and its fragements. That is how you know frags.
 Max Datagramsize 65,535
 
-
+TTL Linux 64, Windows 128
 2. 
 offset 0 gets full application header TCP or ICMP. Packet 1 offset is 0
   all frags get IP header w/offset and timestamp changed  
