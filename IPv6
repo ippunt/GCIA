@@ -1,6 +1,6 @@
 16 byte address, 128 bit, 8 byte net 8 byte host. 
 IPv6 does not fragment. Transmitting node must fragment, routers will not. 
-IPv6 is more efficient that IPv4. All hops do not need to do Checksum as there is not one in the header. Ipv4 recomputes checksum as TTL decreased. 
+IPv6 is more efficient than IPv4. All hops do not need to do Checksum as there is not one in the header. Ipv4 recomputes checksum as TTL decreased. 
 Fields removed - Fragmentation and flags, checksum, options, IP ID, header length. 
 Fields added flow label, 20 bit flow identifier 
   A flow is a sequence of packets that are sent from a particular source to a particular, unicast or multicast, destination. 
@@ -21,3 +21,18 @@ Extension headers -
 An extension header is not fragmentable, and must be processed by all nodes.
 
 Neighbor Solicitation information- 
+If IPv6 device NA, registers with switch, no flood.
+show ipv6 nd on-link prefix; displays RA
+show ipv6 traffic; useful stats
+Devices send a IGMP join request. MLD IPv6 replaces IGMP
+
+Broker- Hurricane electric can be used as free IPv6 Broker
+
+NDP, IGMP, types changed 0-127 error, 128-255 informational
+psuedo-header encapsulated the IP header for checksum
+provides host on local network like ARP once did. detect change in link local address.
+
+RA Destination- 33:33:00:00:00:01 , ff02::1 going to all nodes. Hey I am a router, Hello!
+RA Source-      00:1b:90:2d:bb:bb , fe80::21b6   Router link-local
+RS Source-      00:1b:90:2d:bb:bb , fe80::21b6  
+RS Dest -       33:33:00:00:00:02 , ff02::2 Going to all routers. Hey I need a router, tell me about you. 
