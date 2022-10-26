@@ -12,10 +12,13 @@ SOA - Start of Authority Authority information about zone
 
 Zone transfer - Query may show AXFR mydomain.local    Large answeres or transfers are generally TCP. These are truncated
 
+TCPdump output I believe - 
+                Query ID 30644,  Recursive + , A recort Type, ? Query ,   name queried
+1.1.1.1.2727 > 1.1.1.2.53: 30644 + A? www.sans.org 
+1.1.1.2.53 > 1.1.1.1.2727: 30644 1/0/0 A 66.35.59.202
+                            1 answer / 0 Authority / 0 additional  Answer   66.35.59.202
 
-
-
-Wireshark
+Wireshark- 
 dns.a == 1.1.1.1; find IP in answers
 
 BPF - 
