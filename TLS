@@ -13,6 +13,7 @@ SNI- Server name indicator within TLS handshake may let you know who the host is
   Allows server to host multiple secure webpages. 
   Without SNI server wouldn't know which certificate to serve.
   RTT-0 requires this key to be preshared in DNS. First packet may be the get
+  RTT-0 may be subject to some replay attacks
   
 How could you encrypt the SNI? Servers public key is in DNS record.
 
