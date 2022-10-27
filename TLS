@@ -9,4 +9,28 @@ TLS 1.3 disabled many algos decryption relied on. AUg 2018 fast open begin to be
   Fast-Open subsequent connections rely on previously negotiated key material, coupled with DNS over TLS hard to detect anything.
 
 
-SNI
+SNI- Server name indicator within TLS handshake may let you know who the host is visiting at the IP address.
+  Allows server to host multiple secure webpages. 
+  Without SNI server wouldn't know which certificate to serve.
+  RTT-0 requires this key to be preshared in DNS. First packet may be the get
+  
+How could you encrypt the SNI? Servers public key is in DNS record.
+
+Analysis-
+ 1.2   https://tls.ulfheim.net
+ 1.3  https://tls13.ulfheim.net
+
+
+TLS 1.2 Full Handshake
+1. C hello
+2. S hello
+3. C key exchange
+4. S Key Exhcnage 
+5. http get
+6. http response
+
+TLS 1.3
+1. C hello, key share
+2. S hello, key share
+3. http get
+4. http response
