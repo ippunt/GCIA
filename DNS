@@ -46,3 +46,13 @@ Dependancies- Response needs Correct IPs, ports, and Query ID.
 Poisoning - 
 You could send a query w/ authority and poison the servers answers. That is no longer an option. But there are still methods. 
   bailwich checkins is what prevents this. 
+  
+DNSSec
+Ensure integrity and authenticity. If you want confidentiality utilize DOH or DOT.
+DNSSec utilizes public key cryptography to digitally sign responses. 
+Introduces new DNS resource records:
+  RRSIG- Signature for a resource record. Hash of record.
+  DNSKEY- Public key for DNS zone.
+  DS - Signing key of a delegate zone.
+  NSEC - proof that the name does not exist. NSec gives you the next signed record for integrity and authenticity. 
+DNSSec supported - field z will be a 1, not supported 0. 
