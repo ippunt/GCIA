@@ -1,0 +1,12 @@
+Parts of the microsoft protocol are NBO big endian BE, parts are little endian LE, and ascii and Unicode. 
+BE = aabbcc  LE= ccbbaa     how messages are sent to CPU is the difference between BE and LE.
+NBO was established for netowrking protocols but Microsoft... Stands for Network Byte Order
+SMB is based on CIFS.
+
+SMB supports file printing, named pipes, serial and other comm devices.
+
+Flow:
+Negotiate Dialect - 
+Session Setup - 
+Tee Connect  - 
+Resource Access -
