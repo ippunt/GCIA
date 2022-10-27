@@ -9,3 +9,28 @@ Flow:
 Negotiate Dialect - SMB version
 Session Setup - Authentication, Kerberos, No domain SAM
 Tee Connect  - Access to share
+
+SMB version 3 supports encryption natively but not mandatory.
+
+Message ID - negotiation does not have ID but every request gets an incremented ID.
+  negotation 0, setup 1, thereafter 2,3,4,5
+
+
+Wireshark - 
+smb2.msg_id == 1093
+
+Get message id as column
+  SMB2 > SMB2Header > Message ID:2 , right click apply as column 
+smb.tree == "\\\\fileserver\IPC$"
+smb2.tree contains fileserver
+smb2.tree matches fileserver
+Best not using contains or matches it is iffy
+Edit > find packet > RegEx or String  <fileserver>            This worked perfectly!!!!
+
+
+Messages:
+Create - Executed as create or open access something
+Read - read from a source
+write - write data to a source
+IOCTL - Executes a file system or device control across network
+
