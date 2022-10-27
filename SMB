@@ -6,7 +6,6 @@ SMB is based on CIFS.
 SMB supports file printing, named pipes, serial and other comm devices.
 
 Flow:
-Negotiate Dialect - 
-Session Setup - 
-Tee Connect  - 
-Resource Access -
+Negotiate Dialect - SMB version
+Session Setup - Authentication, Kerberos, No domain SAM
+Tee Connect  - Access to share
