@@ -7,6 +7,7 @@ Notes: Some things need quotes IP addresses is one of those things!Must be root 
 5. Checksum manipulation  , read packet from pcap
 6. Utilize in python
 7. iptables You want scapy to be able to send appropriate traffic for LaBrea
+8. Create a list     , Open packets right in wireshark 
 
 1.
 which scapy; Where is our binary. Entering Scapy will tell you which version it is.
@@ -44,3 +45,9 @@ from scapy.all import *
 7. 
 iptables -A OUTPUT -p tcp --tcp-flags RST RST -j drop
 iptables -A OUTPUT -p ICMP --icmp-type port-unreachable RST RST -j drop
+
+8.
+packets=[]
+packets.append(request); append 1 packet
+packets.append(reply); 
+wireshark(packets); 
