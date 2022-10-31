@@ -8,6 +8,8 @@ Notes: Some things need quotes IP addresses is one of those things!Must be root 
 6. Utilize in python
 7. iptables You want scapy to be able to send appropriate traffic for LaBrea
 8. Create a list     , Open packets right in wireshark 
+9. Time      Note time is Epock so you may have to do a conversion 
+10. Write you scapy work into pcap
 
 1.
 which scapy; Where is our binary. Entering Scapy will tell you which version it is.
@@ -51,3 +53,10 @@ packets=[]
 packets.append(request); append 1 packet
 packets.append(reply); 
 wireshark(packets); 
+
+9.
+p=IP(src="1.1.1.1")
+p.time=123; This will change timestamp but 123 would be a jacked up Epock time.
+10. 
+wrpcap ("p.pcap", p); You create pcap name and from what variable
+packet=rdpcap("altered.pcap"); read pcap into variable
