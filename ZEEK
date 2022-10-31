@@ -28,3 +28,8 @@ signature sig1 {
 header ip[16:1] ==41,62
 event "sig1 detect"
 } Detecs if the first octet in IP dest is 41 or 62
+
+4.
+cat pe.log | zeek-cut -d ts uid; normalize timestamp and print out UID
+cat http.log | zeek-cut-d ts id.orig_h id.orig_p id.resp_h
+cat conn.log | zeek-cut -d ts proto
