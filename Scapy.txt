@@ -37,7 +37,7 @@ send - Send stuff at layer 3
 sendp - send stuff at layer 2
 
 5.
-packet=rdpcap("altered.pcap"); delpacket[0][IP].chksum; del packet[0][TCP].chksum.
+packet=rdpcap("altered.pcap"); del packet[0][IP].chksum; del packet[0][TCP].chksum.
   When scapy deleted Chksum it will automatically recalculate and build a proper chksum
   
 6. 
