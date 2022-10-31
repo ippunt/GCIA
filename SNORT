@@ -1,0 +1,28 @@
+1. Be able to help yourslef
+2. Always use pcap to test rules
+3. Alerts to prompt might not be enough
+4. packets and plugin help
+5. Unified will log to file with packets
+6. Syslog
+
+1.
+snort -?, display all options   ->snort -? | grep "\-A"
+
+2. 
+snort -c snort.lua -r my.pcap -R my.rules -q -A alert_fast
+
+3. 
+snort --help-config alert_fast; Example --lua "alert_fast= {file=true}"
+
+4. 
+snort--help-plugins | grep "logger"
+
+5. 
+snort -c .snort.lua -r my.pcap -l ./logs -A unified2
+u2spewfoo .logs/unified2.log.1612569; Output Alert info + packet
+u2boat -t pcap unified2.log.1612569  1612569_alert.pcap
+Now you could use zeek, TCP dump, or wireshark on the pcap
+
+6.
+Why \n, I really don't know if need to get this to work, do some research. Or rapid testing. 
+alert_syslog = { \n facility = 'auth', \n level = 'alert', \n host = 1.1.1.1:514 }
