@@ -1,4 +1,5 @@
 Vendors are utilizing protocols with UDP to enable NAT. 
+  AS ICMP can NAT out of network so can UDP. 
 
 Suports Unicast, Broadcast & multicast. 
 Protocols that use UDP: DNS,SNMP,DHCP,NFS,TFTP 
