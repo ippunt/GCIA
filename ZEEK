@@ -33,6 +33,6 @@ event "sig1 detect"
 4.
 cat pe.log | zeek-cut -d ts uid; normalize timestamp and print out UID
 cat http.log | zeek-cut-d ts id.orig_h id.orig_p id.resp_h
+cat conn.log | zeek-cut -d ts proto
 
 5. zeek -r inbetween.pcap -s windows_banner.sig
-cat conn.log | zeek-cut -d ts proto
