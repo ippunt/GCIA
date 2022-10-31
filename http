@@ -1,0 +1,26 @@
+1. http codes
+2. Frame format
+3. http3
+4. Strategies to decrypt http/3 QUick
+1. 100-199 informational, 200-299 success, 300-399 redirected, 400-499 client errors, 500-599 server side errors
+
+2. 
+9 byte w. variable length payload
+Length (3 Byte), Type (1 Byte) , Flags (1 Byte), Reserved (1 bit), Stream Identifier (31 bit).  Res + St ID 4 byte. 
+Length - indicated length of payload not including header bytes
+Type- frame type different composition
+Reserved - Value must be 0x00 when set.
+Steam ID - assigned to single frame or related frames. Client initiate odd number, server initate even number
+    You may have multiple http stream in on TCP sream
+    
+3. 
+Quic is the basis for HTTP/3
+Build to be efficient for content delivery networks
+Speeds things up as uses UDP not TCP
+RFC 8999,9000,9001,9002
+
+Header-
+8 bit frame type - Rest of the header will change dependant on type of header we have. 
+
+4. 
+Deny on firewall and protocols should negotiate http/2 TCP. 
