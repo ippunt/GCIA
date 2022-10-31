@@ -1,0 +1,6 @@
+Suuports Unicast, Broadcast & multicast. 
+Protocols that use UDP: DNS,SNMP,DHCP,NFS,TFTP 
+Header is a psuedo-header check which includes IP header
+Checksum optional in IPv4 mandatory in IPv6. 
+Traceroute in linux uses UDP
+Length 0 in jumbogram for IPv6
