@@ -1,5 +1,6 @@
 1. Expectations
 2. UDP 
+3. BPF
 
 
 
@@ -8,6 +9,7 @@
 [S] to host closed port, response [R.]
 [S] to host host does not exist but network does,  Router send ICMP host Unreachable.
 [S] to firewall or router drops,  Retransmits w/ new timestamps
+Graceful Termination - [C-F.] [S.][SF.][C.] 4 packets |    [CF.] [SF.][C.]  3 packets may happen as well. But should be 4. 
 
 URG pointer used:
 ABCDE seq 1:6 [P.U]   Urg 7, FGHIJ   seq FGHIJ   seq 6:11
@@ -16,3 +18,5 @@ Received ABCDEFHIJ      Urg byte dropped which is G
 2.
 UDP closed port received packet, icmp port unreachable sent in response.
 UDP open port received packet, injests the packet into application. No response have to wait for timeout. Why Scanning so slow. 
+
+3. BPF
