@@ -20,3 +20,6 @@ UDP closed port received packet, icmp port unreachable sent in response.
 UDP open port received packet, injests the packet into application. No response have to wait for timeout. Why Scanning so slow. 
 
 3. BPF
+SYN no ECN: tcp[13] & 0x3f = 0x02      |    SYN ACK no ECN  tcp[13] & 0x3f = 0x12
+Reset tcp [13]& 0x04 !=0;
+Reset or FIN or both tcp[13 & 0x05 !=0;
