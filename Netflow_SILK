@@ -7,6 +7,7 @@ https://tools.netsa.cert.org/silk/rwfilter.html
 3. TCP
 4. Stats
 5. Uniq
+6. Find Percentage UDP
 
 
 1. 
@@ -22,3 +23,8 @@ rwfilter sc2.silk --scidr=10.10.10.0/24 --pass=stdout | rwfilter --input-pipe=st
 --print-stats, --pass=stdout, --fail=stdout, print-vol, --max-pass, --max=fail
 
 5. | rwuniq --fields proto;  see all uniq protocols. 
+
+6. 
+rwfilter mysilk.com --proto=1-255  --print-statistics
+rwfilter mysilk.com --proto=17 --print-statistics
+Total/proto=17
