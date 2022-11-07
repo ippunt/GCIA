@@ -1,0 +1,25 @@
+1. Obtaining files from pcap
+2. Find a word
+3. Find protocol dessectors
+4. Conversations and protocols
+5. Legal hold or just save protocol packets
+
+
+1. 
+FIle > Export Objects > protocol > HTTP > Save All
+
+Analyze > Follow TCP steam > Save As RAW > Remove headers 
+Remove ^M from files > base 64 - d filename > NewFileName
+
+2.    Note: play with DNS as it is all clear text
+Edit > find packet > display filter > String > beer.
+
+3. 
+Analyze > Display Filter Expression
+
+4. 
+Statistics > Conversations
+
+5. 
+Write a filter to see data you want
+File > Export specified packets > Displayed
