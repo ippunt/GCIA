@@ -25,7 +25,7 @@ so these are kind of special in -r needs file and -c needs number, rest of switc
 When you read outut 0x0000 indicated firest line and bytes 0-15, 0x0010 indicates second line and bytes 16-
 
 3. Ones preserve, 0 discard
-
+Default: protocol[offset:1]     |  tcp[2:2] != 80     | ip[9] = 0x01
 Most Exclusive'tcp[13] = 0x03'; are bits exactly set 
 Less Exclusive'tcp[13] & 0x03 = 0x03'; are these bits set exclude others
 Least Exlusive'tcp[13] & 0x03 !=0'; is either one set atleast one
