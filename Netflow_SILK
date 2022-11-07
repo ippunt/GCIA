@@ -1,0 +1,24 @@
+A flow is a 5 tuple srcip, dstip, srcprt, dstprt, protocol.
+SILK uses rwfilter.
+https://tools.netsa.cert.org/silk/rwfilter.html
+--pass=stdout   Absolutely needed. Data is kept in binary format otherwise. 
+1. Query with some extra stuff
+2. ports
+3. TCP
+4. Stats
+5. Uniq
+
+
+1. 
+rwfilter sc2.silk --scidr=10.10.10.0/24 --pass=stdout | rwfilter --input-pipe=stdin --saddress=10.10.10.10 --fail=stdout | rwcut -f 1,2,4 --num-recs=5 ;
+
+2.
+--dports=443,80
+
+3.
+--flags-initial=S/FSPARU; want to find/ flags examined
+
+4. 
+--print-stats, --pass=stdout, --fail=stdout, print-vol, --max-pass, --max=fail
+
+5. | rwuniq --fields proto;  see all uniq protocols. 
