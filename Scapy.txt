@@ -1,7 +1,7 @@
 Craft, read, manipulate, combine and write packets and pcaps. CLI access or import for complex tasks into python.
 Notes: Some things need quotes IP addresses is one of those things!Must be root to send packets
 1. Help and using tool for help info
-2. LaBrea.py  python script that will utilize all IPs on subnet and play with TCP connections. 
+2. LaBrea.py  python script that will utilize all IPs on subnet and play with TCP connections. Did not work well. 
 3. Assigning variables
 4.Sending and receiving
 5. Checksum manipulation  , read packet from pcap
